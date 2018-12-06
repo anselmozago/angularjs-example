@@ -1,0 +1,23 @@
+<div class="container-fluid">
+
+  <div class="alert alert-success" role="alert" ng-show="success">
+    Veículo excluído com sucesso!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <p ng-show="success">
+    <a href="#!/veiculos" class="btn btn-info">Voltar</a>
+  </p>
+
+  <h1 ng-hide="success">{{veiculo.marca}} {{veiculo.veiculo}} {{veiculo.ano}}</h1>
+
+  <p ng-hide="success">Deseja excluir esse veículo?</p>
+
+  <p ng-hide="success">
+    <a href="#!/veiculos/{{veiculo.id}}" class="btn btn-info">Cancelar</a>
+    <button type="button" class="btn btn-info" ng-click="confirm()">Confirmar</button>
+  </p>
+
+</div>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" ng-app="veiculosApp">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Letsfair">
+  <meta name="apple-mobile-web-app-title" content="Letsfair">
+  <meta name="theme-color" content="#dfdfdf">
+  <meta name="msapplication-navbutton-color" content="#dfdfdf">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="msapplication-starturl" content="/">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <title>Veículos</title>
+  <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="app.css" />
+  <link rel="stylesheet" href="core/app.animations.css" />
+  <script src="lib/jquery/dist/jquery.js"></script>
+  <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular-animate/angular-animate.js"></script>
+  <script src="lib/angular-resource/angular-resource.js"></script>
+  <script src="lib/angular-route/angular-route.js"></script>
+  <script src="core/app.module.js"></script>
+  <script src="app.config.js"></script>
+  <script src="core/app.animations.js"></script>
+  <script src="core/core.module.js"></script>
+  <script src="core/base64-upload.js"></script>
+  <script src="core/veiculo/veiculo.service.js"></script>
+  <script src="veiculo-list/veiculo-list.component.js"></script>
+  <script src="veiculo-search/veiculo-search.component.js"></script>
+  <script src="veiculo-detail/veiculo-detail.component.js"></script>
+  <script src="veiculo-new/veiculo-new.component.js"></script>
+  <script src="veiculo-update/veiculo-update.component.js"></script>
+  <script src="veiculo-delete/veiculo-delete.component.js"></script>
+</head>
+
+<body>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #3eb3b8;">
+
+    <a class="navbar-brand" href="#">
+      <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      Veículos
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Todos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/#!/veiculos/new">Adicionar novo</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input id="searchQuery" class="form-control mr-sm-2" type="search" placeholder="Procurar veículo" aria-label="Search">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit" onclick="location.href='/#!/veiculos/search/'+document.getElementById('searchQuery').value">Buscar</button>
+      </form>
+    </div>
+  </nav>
+  <div class="view-container">
+    <div ng-view class="view-frame"></div>
+  </div>
+</body>
+
+</html>

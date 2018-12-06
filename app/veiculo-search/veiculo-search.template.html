@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <h1>Resultado da busca para <i>"{{query}}"</i></h1>
+  <p ng-hide="veiculos.length">Não foram encontrados veículos para essa busca</p>
+  <div class="card-columns">
+    <div class="card text-center veiculo-list-item" ng-repeat="veiculo in veiculos">
+      <div class="card-body">
+        <h5 class="card-title">{{veiculo.marca}} {{veiculo.veiculo}}</h5>
+        <p class="card-text">{{veiculo.ano}}</p>
+        <a href="#!/veiculos/{{veiculo.id}}" class="btn btn-info">Mais informações</a>
+      </div>
+    </div>
+  </div>
+</div>

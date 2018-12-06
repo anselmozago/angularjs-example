@@ -1,0 +1,24 @@
+<div class="container-fluid">
+
+  <div class="alert alert-success" role="alert" ng-show="messageSuccess">
+    Veículo salvo com sucesso!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <h1>{{veiculo.marca}} {{veiculo.veiculo}} {{veiculo.ano}}</h1>
+
+  <p ng-show="veiculo.vendido" style="margin-top:-20px"><span class="badge badge-danger">Vendido</span></p>
+
+  <p ng-show="veiculo.imagem">
+    <img src="data:{{veiculo.imagem.filetype}};base64, {{veiculo.imagem.base64}}" height="300" style="border: 1px solid gray;" />
+  </p>
+
+  <p style="max-width: 400px">{{veiculo.descricao}}</p>
+
+  <p>
+    <a href="#!/veiculos/update/{{veiculo.id}}" class="btn btn-info">Editar</a>
+    <a href="#!/veiculos/delete/{{veiculo.id}}" class="btn btn-info">Excluir</a>
+  </p>
+</div>

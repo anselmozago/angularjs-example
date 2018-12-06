@@ -1,0 +1,63 @@
+<div class="container-fluid">
+  <h1>Alterar veículo</h1>
+
+  <form class="form-horizontal" role="form" name="form"  ng-submit="updateVeiculo()">
+    <div class="form-group">
+      <label for="marca" class="col-sm-2 control-label">Marca</label>
+      <div class="col-sm-10">
+        <input type="text" ng-model="veiculo.marca" class="form-control" id="marca" required />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="modelo" class="col-sm-2 control-label">Modelo</label>
+      <div class="col-sm-10">
+        <input type="text" ng-model="veiculo.veiculo" class="form-control" id="modelo" required />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="ano" class="col-sm-2 control-label">Ano</label>
+      <div class="col-sm-10">
+        <select class="form-control" id="ano" ng-model="veiculo.ano" ng-options="option as option for option in options"
+          required>
+          <option></option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="descricao" class="col-sm-2 control-label">Descrição</label>
+      <div class="col-sm-10">
+        <textarea ng-model="veiculo.descricao" class="form-control" id="descricao" rows="3" required></textarea>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input class="form-check-input" ng-model="veiculo.vendido" type="checkbox" id="check">
+          <label class="form-check-label" for="check">Vendido</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div><label class="col-sm-2 control-label">Foto do veículo</label></div>
+      <div class="col-sm-10">
+        <input type="file" ng-model="veiculo.imagem" accept="image/*" maxsize="100" base-sixty-four-input>
+        <p ng-show="form.$error.maxsize"><span class="badge badge-warning">Arquivo não pode exceder 100 KB</span></p>
+        <p ng-show="veiculo.imagem && !form.$error.maxsize" style="margin-top: 10px">
+          <img src="data:{{veiculo.imagem.filetype}};base64, {{veiculo.imagem.base64}}" height="100" />
+        </p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <input type="submit" class="btn btn-info" value="Salvar" />
+      </div>
+    </div>
+  </form>
+
+</div>

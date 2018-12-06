@@ -1,0 +1,112 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  color:#aaaaaa;
+  margin-bottom: 30px;
+}
+
+/* View: Veiculos list */
+.veiculos {
+  list-style: none;
+}
+
+.veiculos li {
+  clear: both;
+  height: 115px;
+  padding-top: 15px;
+}
+
+.thumb {
+  float: left;
+  height: 100px;
+  margin: -0.5em 1em 1.5em 0;
+  padding-bottom: 1em;
+  width: 100px;
+}
+
+/* View: Veiculo detail */
+.veiculo {
+  background-color: white;
+  display: none;
+  float: left;
+  height: 400px;
+  margin-bottom: 2em;
+  margin-right: 3em;
+  padding: 2em;
+  width: 400px;
+}
+
+.veiculo:first-child {
+  display: block;
+}
+
+.veiculo-images {
+  background-color: white;
+  float: left;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+  width: 450px;
+}
+
+.veiculo-thumbs {
+  list-style: none;
+  margin: 0;
+}
+
+.veiculo-thumbs img {
+  height: 100px;
+  padding: 1em;
+  width: 100px;
+}
+
+.veiculo-thumbs li {
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  display: inline-block;
+  margin: 1em;
+}
+
+.specs {
+  clear: both;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.specs dt {
+  font-weight: bold;
+}
+
+.specs > li {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+}
+
+.specs > li > span {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.btn-info {
+  background-color: #3eb3b8;
+  border-color: #3eb3b8;
+}
+
+.navbar-light .navbar-brand {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: bold;
+}
+
+.navbar-light:hover .navbar-brand:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.control-label {
+  white-space: nowrap;
+}
